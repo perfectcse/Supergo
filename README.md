@@ -24,7 +24,7 @@ A full-stack MERN application for creating, verifying, and managing digital cert
 https://certifypro-frontend-vishal.onrender.com
 
 **Backend API:**  
-https://srv-d9fpelernols73cfm220
+https://certifypro-backend-vishal.onrender.com
 
 ## 👨‍💻 Author
 
