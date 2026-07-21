@@ -1,0 +1,621 @@
+/* =========================================
+   CERTIFICATE PREVIEW CARD
+========================================= */
+
+.certificate-preview-card {
+  width: 100%;
+  min-width: 0;
+  padding: 28px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+
+  background-color: #ffffff;
+
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================
+   PREVIEW HEADER
+========================================= */
+
+.preview-header {
+  margin-bottom: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.preview-header .component-heading {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   DOWNLOAD PDF BUTTON
+========================================= */
+
+.download-pdf-btn {
+  flex-shrink: 0;
+
+  min-height: 44px;
+  padding: 0 16px;
+
+  border: none;
+  border-radius: 9px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  background-color: #4f46e5;
+  color: #ffffff;
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.download-pdf-btn:hover:not(:disabled) {
+  background-color: #4338ca;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+}
+
+.download-pdf-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
+/* =========================================
+   DOWNLOAD LOADING SPINNER
+========================================= */
+
+.download-spinner {
+  animation: certificate-spin 1s linear infinite;
+}
+
+@keyframes certificate-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   CERTIFICATE WRAPPER
+========================================= */
+
+.certificate-preview-wrapper {
+  width: 100%;
+  min-width: 0;
+
+  overflow-x: auto;
+
+  padding: 10px 0 15px;
+}
+
+
+/* =========================================
+   MAIN CERTIFICATE
+========================================= */
+
+.certificate-preview {
+  width: 100%;
+  min-width: 700px;
+
+  aspect-ratio: 1.414 / 1;
+
+  padding: 14px;
+
+  background-color: #ffffff;
+  color: #4338ca;
+
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================
+   CERTIFICATE INNER BORDER
+========================================= */
+
+.certificate-inner-border {
+  width: 100%;
+  height: 100%;
+
+  min-height: 470px;
+
+  padding: 35px 50px;
+
+  border: 4px double currentColor;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CERTIFICATE LOGO
+========================================= */
+
+.certificate-logo {
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: currentColor;
+}
+
+
+/* =========================================
+   CERTIFICATE TYPE LABEL
+========================================= */
+
+.certificate-label {
+  margin: 0;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: currentColor;
+}
+
+
+/* =========================================
+   MAIN CERTIFICATE HEADING
+========================================= */
+
+.certificate-preview h2 {
+  margin: 7px 0 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 2rem;
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  color: currentColor;
+}
+
+
+/* =========================================
+   PRESENTED TEXT
+========================================= */
+
+.presented-text {
+  margin: 20px 0 0;
+
+  font-size: 0.82rem;
+
+  color: currentColor;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================
+   RECIPIENT NAME
+========================================= */
+
+.recipient-name {
+  margin: 7px 0 0;
+
+  max-width: 100%;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+
+  line-height: 1.15;
+
+  color: currentColor;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   RECIPIENT DIVIDER
+========================================= */
+
+.recipient-divider {
+  width: 240px;
+  max-width: 80%;
+
+  height: 1px;
+
+  margin: 9px 0 14px;
+
+  background-color: currentColor;
+
+  opacity: 0.4;
+}
+
+
+/* =========================================
+   CERTIFICATE DESCRIPTION
+========================================= */
+
+.certificate-description {
+  max-width: 580px;
+
+  margin: 0;
+
+  font-size: 0.82rem;
+
+  line-height: 1.6;
+
+  color: currentColor;
+
+  opacity: 0.75;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   EVENT NAME
+========================================= */
+
+.event-name {
+  max-width: 620px;
+
+  margin: 13px 0 0;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  color: currentColor;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   ORGANIZATION NAME
+========================================= */
+
+.organization-name {
+  margin: 5px 0 0;
+
+  font-size: 0.8rem;
+
+  color: currentColor;
+
+  opacity: 0.7;
+}
+
+
+/* =========================================
+   CERTIFICATE META INFORMATION
+========================================= */
+
+.certificate-meta {
+  width: 100%;
+
+  margin-top: 28px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.certificate-meta-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.certificate-meta-item:first-child {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.certificate-meta-item:last-child {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.certificate-meta span {
+  font-size: 0.62rem;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  color: currentColor;
+
+  opacity: 0.6;
+}
+
+.certificate-meta strong {
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  color: currentColor;
+}
+
+
+/* =========================================
+   CLASSIC TEMPLATE
+========================================= */
+
+.certificate-classic {
+  color: #4338ca;
+
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 255, 255, 0.96)
+    ),
+    radial-gradient(
+      circle,
+      #c7d2fe 1px,
+      transparent 1px
+    );
+
+  background-size:
+    auto,
+    20px 20px;
+}
+
+.certificate-classic .certificate-inner-border {
+  border-color: #4338ca;
+}
+
+
+/* =========================================
+   MODERN TEMPLATE
+========================================= */
+
+.certificate-modern {
+  color: #0f766e;
+
+  background: linear-gradient(
+    135deg,
+    #f0fdfa,
+    #ffffff
+  );
+}
+
+.certificate-modern .certificate-inner-border {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #0f766e;
+}
+
+
+/* =========================================
+   ROYAL TEMPLATE
+========================================= */
+
+.certificate-royal {
+  color: #92400e;
+
+  background: linear-gradient(
+    135deg,
+    #fffbeb,
+    #fef3c7
+  );
+}
+
+.certificate-royal .certificate-inner-border {
+  border-width: 5px;
+  border-color: #92400e;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .certificate-preview-card {
+    padding: 22px 18px;
+  }
+
+  .preview-header {
+    align-items: flex-start;
+  }
+
+  .certificate-preview {
+    min-width: 650px;
+  }
+
+  .certificate-inner-border {
+    min-height: 430px;
+
+    padding: 30px 40px;
+  }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+  .preview-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .download-pdf-btn {
+    width: 100%;
+  }
+
+  .certificate-preview-wrapper {
+    overflow-x: auto;
+  }
+
+  .certificate-preview {
+    min-width: 620px;
+  }
+
+  .certificate-inner-border {
+    min-height: 420px;
+
+    padding: 25px 35px;
+  }
+}
+/* =========================================
+   Preview Action Buttons
+========================================= */
+
+.preview-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* =========================================
+   Generate Button
+========================================= */
+
+.generate-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  padding:12px 22px;
+
+  border:none;
+  border-radius:10px;
+
+  cursor:pointer;
+
+  font-size:15px;
+  font-weight:600;
+
+  color:#fff;
+
+  background:linear-gradient(
+    135deg,
+    #16a34a,
+    #22c55e
+  );
+
+  transition:.3s ease;
+}
+
+.generate-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(34,197,94,.35);
+}
+
+/* =========================================
+   Download Button
+========================================= */
+
+.download-pdf-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  padding:12px 22px;
+
+  border:none;
+  border-radius:10px;
+
+  cursor:pointer;
+
+  font-size:15px;
+  font-weight:600;
+
+  color:#fff;
+
+  background:linear-gradient(
+    135deg,
+    #2563eb,
+    #3b82f6
+  );
+
+  transition:.3s ease;
+}
+
+.download-pdf-btn:hover:not(:disabled){
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(59,130,246,.35);
+}
+
+/* =========================================
+   Disabled State
+========================================= */
+
+.download-pdf-btn:disabled{
+  opacity:.55;
+  cursor:not-allowed;
+  transform:none;
+  box-shadow:none;
+}
+
+/* =========================================
+   Spinner
+========================================= */
+
+.download-spinner{
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width:768px){
+
+  .preview-actions{
+    width:100%;
+    flex-direction:column;
+  }
+
+  .generate-btn,
+  .download-pdf-btn{
+    width:100%;
+  }
+
+}
